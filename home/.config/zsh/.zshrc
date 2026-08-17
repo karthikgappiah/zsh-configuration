@@ -57,3 +57,8 @@ fi
 # PROMPT is an environment variable that sets the shell prompt.
 # Customize PROMPT for productive minimalism.
 PROMPT='%# '
+
+# === Aliases ===
+
+# Edit $ZDOTDIR/aliases.sh to set aliases.
+[[ -r "$ZDOTDIR/aliases.sh" ]] && source "$ZDOTDIR/aliases.sh"
