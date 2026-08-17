@@ -31,6 +31,11 @@ setopt SHARE_HISTORY
 
 # === Completions ===
 
+# Add the completions plugin to FPATH (if installed).
+if [[ -d "$HOMEBREW_PREFIX/share/zsh-completions" ]]; then
+	fpath=("$HOMEBREW_PREFIX/share/zsh-completions" $fpath)
+fi
+
 # Set options for convenience.
 zstyle ':completion:*' menu select                        # Use a selector for visual navigation.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Ignore letter casing when completing commands.
@@ -67,3 +72,8 @@ PROMPT='%# '
 
 # Edit $ZDOTDIR/integrations.sh to integrate Zsh with command-line tools.
 [[ -r "$ZDOTDIR/integrations.sh" ]] && source "$ZDOTDIR/integrations.sh"
+
+# === Plugins (must be last) ===
+
+# Edit $ZDOTDIR/plugins.sh to extend Zsh with plugins.
+[[ -r "$ZDOTDIR/plugins.sh" ]] && source "$ZDOTDIR/plugins.sh"
