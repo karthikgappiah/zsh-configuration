@@ -1,0 +1,13 @@
+# ===
+# NAME: Zsh Profile
+# PATH: $ZDOTDIR/.zprofile
+# ===
+
+# === PATH Additions ===
+
+# Add Homebrew to PATH.
+if [[ -x /opt/homebrew/bin/brew ]]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)" # Apple Silicon
+elif [[ -x /usr/local/bin/brew ]]; then
+	eval "$(/usr/local/bin/brew shellenv)" # Intel
+fi
