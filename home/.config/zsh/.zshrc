@@ -62,3 +62,8 @@ PROMPT='%# '
 
 # Edit $ZDOTDIR/aliases.sh to set aliases.
 [[ -r "$ZDOTDIR/aliases.sh" ]] && source "$ZDOTDIR/aliases.sh"
+
+# === Integrations ===
+
+# Edit $ZDOTDIR/integrations.sh to integrate Zsh with command-line tools.
+[[ -r "$ZDOTDIR/integrations.sh" ]] && source "$ZDOTDIR/integrations.sh"
